@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 
 const {
   handleImageUpload,
@@ -8,7 +9,7 @@ const {
   deleteProduct,
 } = require("../../controllers/admin/products-controller");
 
-const { upload } = require("../../helpers/cloudinary");
+const { upload } = require("../../helpers/localUpload");
 
 const router = express.Router();
 
