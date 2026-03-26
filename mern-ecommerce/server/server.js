@@ -44,6 +44,8 @@ app.use(
 
 app.use(cookieParser());
 app.use(express.json());
+app.use("/uploads", require("express").static(require("path").join(__dirname, "uploads")));
+
 app.use("/api/auth", authRouter);
 app.use("/api/admin/products", adminProductsRouter);
 app.use("/api/admin/orders", adminOrderRouter);
